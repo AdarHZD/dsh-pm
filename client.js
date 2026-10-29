@@ -38,7 +38,7 @@ window.__ModuleLoader__.load({
     const WHO = { adar: 'Adar', dsh: 'DSH' }
 
     const ZH = {
-      panel: '工单',
+      panel: 'PM',
       loading: '加载中…',
       loadFailed: '加载失败',
       retry: '重试',
@@ -90,7 +90,7 @@ window.__ModuleLoader__.load({
       revision: '记录版本',
       prereqs: '需要你准备',
       none: '无',
-      empty: '这个项目还没有工单',
+      empty: '这个项目还没有任务',
       emptyFilter: '没有符合条件的任务',
       pausedBanner: '已暂停 · 不会派新任务',
       saved: '已保存 · 编辑中',
@@ -171,7 +171,7 @@ window.__ModuleLoader__.load({
       archiveDoneToast: '已归档已完结任务',
     }
     const EN = {
-      panel: 'Tickets',
+      panel: 'PM',
       loading: 'Loading…',
       loadFailed: 'Could not load',
       retry: 'Retry',
@@ -223,7 +223,7 @@ window.__ModuleLoader__.load({
       revision: 'Revision',
       prereqs: 'Needs you to prepare',
       none: 'None',
-      empty: 'No tickets in this project yet',
+      empty: 'No tasks in this project yet',
       emptyFilter: 'No task matches this filter',
       pausedBanner: 'Paused · no new tasks are dispatched',
       saved: 'Saved · Editing',

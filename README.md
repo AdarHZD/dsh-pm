@@ -1,8 +1,8 @@
-# 项目工单看板（插件名 @local/dsh-pm）
+# 项目 PM（插件名 @local/dsh-pm）
 
 GitHub: https://github.com/AdarHZD/dsh-pm
 
-跟着项目走的工单队列 + 夜间 agent 领活入口 + 每个任务一条能点开的对话。UI 以
+跟着项目走的任务队列 + 夜间 agent 领活入口 + 每个任务一条能点开的对话。UI 以
 `research/kanban/prototype/board.html` 为唯一标准。
 
 ```
@@ -23,7 +23,7 @@ dsh-pm/
 1. DSH → 设置 → 插件 → 添加插件 → 本地路径，填本目录绝对路径；
 2. 宿主侧 `plugin_manager.install_bundle`（Creator 模式）。
 
-装完侧边栏图标栏出现「工单」入口，点开是看板页。`client.js` 改动由客户端 HMR 热替换；
+装完侧边栏图标栏出现「PM」入口，点开是看板页。`client.js` 改动由客户端 HMR 热替换；
 `index.js` 改动需要停用/启用一次插件（或重启 DSH）生效。
 
 ## 卸载
@@ -33,7 +33,7 @@ dsh-pm/
 
 ## 数据位置
 
-数据根默认：`C:\Users\huang\项目总入口\.dsh-kanban\`（设置 → 插件 → 工单里可改）
+数据根默认：`C:\Users\huang\项目总入口\.dsh-kanban\`（设置 → 插件 → 项目 PM 里可改）
 
 > 插件名已从 `dsh-kanban` 更正为 `dsh-pm`；数据根沿用最初规格 `.dsh-kanban`，已有数据无需迁移。
 > 如果你希望数据根也改叫 `.dsh-pm`，在设置里改一下即可（新目录从空板开始，不会自动搬旧数据）。
@@ -123,7 +123,7 @@ board.json 落盘、新建/编辑/六态流转/非法流转拒绝、revision CAS
 
 | 项 | 结果 |
 |---|---|
-| 安装/加载 | `dsh plugin add` 成功，侧边栏出现「工单」，页面可开，无宿主报错 |
+| 安装/加载 | `dsh plugin add` 成功，侧边栏出现「PM」，页面可开，无宿主报错 |
 | 数据落盘 | `board.json` / `project-state.md` / `sessions.json` / `log/` / `report/` 均生成 |
 | 新建/编辑/状态 | UI 新建→编辑中；详情底部「标为可执行」→待执行；非法流转被拒；revision 冲突返回错误 |
 | 执行引擎 | 开始执行 → 建**可见会话**（标题 `T-xxx · 标题`，侧边栏可见）→ 状态 running → agent 完成任务 → done + 完成时间 + 摘要 + 已验证 |

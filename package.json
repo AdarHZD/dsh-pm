@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "license": "MIT",
-  "description": "项目工单看板：跟着项目走的工单队列 + 项目调度（PMO）+ 每个任务一条可见对话",
+  "description": "项目 PM：跟着项目走的任务队列 + 项目调度（PMO）+ 每个任务一条可见对话",
   "icon": "./icon.svg",
   "keywords": [
     "dsh",
