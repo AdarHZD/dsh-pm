@@ -1,5 +1,7 @@
 # 项目工单看板（插件名 @local/dsh-pm）
 
+GitHub: https://github.com/AdarHZD/dsh-pm
+
 跟着项目走的工单队列 + 夜间 agent 领活入口 + 每个任务一条能点开的对话。UI 以
 `research/kanban/prototype/board.html` 为唯一标准。
 
