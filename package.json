@@ -1,0 +1,53 @@
+{
+  "name": "@local/dsh-pm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "项目工单看板：跟着项目走的工单队列 + 项目调度（PMO）+ 每个任务一条可见对话",
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "dsh-pm",
+    "pm"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "test": "node --test test/host.test.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "test/host.test.mjs"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
